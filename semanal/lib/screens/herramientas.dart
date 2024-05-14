@@ -1,25 +1,27 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:semanal/screens/pages/herramientas/calculadora.dart';
 
+import 'pages/herramientas/translator.dart';
 import 'pages/notas.dart';
 import 'pages/paginauno.dart';
 import 'pages/personal.dart';
 
-class Inicial extends StatefulWidget {
-  const Inicial({super.key});
+class Herramientas extends StatefulWidget {
+  const Herramientas({super.key});
 
   @override
-  State<Inicial> createState() => _InicialState();
+  State<Herramientas> createState() => _HerramientasState();
 }
 
-class _InicialState extends State<Inicial> {
+class _HerramientasState extends State<Herramientas> {
   int otro = 0;
   int _selectedIndex = 0;
 
 List paginas = [
-  Paginauno(),
-  Notas(),
+  Calculadora(),
+  Translator(),
   Notas(),
   Notas(),
   Personal(),
@@ -31,32 +33,24 @@ List paginas = [
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Prinicipal'),
-        centerTitle: true,
+        title: Text('Herramientas'),
+
       ),
       body: paginas[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.calculate),
+            label: 'Calculadora',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.note),
-            label: 'Notas',
+            icon: Icon(Icons.translate),
+            label: 'Traductor',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.tablet_android),
-            label: 'Consultas',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calculate),
-            label: 'Herramientas',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Personal',
+            label: 'Otros',
           ),
         ],
         currentIndex: _selectedIndex,
@@ -67,8 +61,9 @@ List paginas = [
   }
 
   void _onItemTapped(int index) {
-    if (index == 3) {
-      Navigator.pushNamed(context, '/herramientas');
+    if (index == 4) {
+      //Navigator.pushNamed(context, routeName);
+      print('nada por ahora');
     } else{
     _selectedIndex = index;
     setState(() { }
