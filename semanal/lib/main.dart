@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:semanal/screens/inicial.dart';
 
+import 'screens/consultas.dart';
+
 void main(List<String> args) {
-  runApp(MyAppSemana());
+  runApp(const MyAppSemana());
 }
 
 
@@ -11,9 +13,15 @@ class MyAppSemana extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Inicial',
-      home: Inicial(),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+    '/': (context) => const Inicial(),
+    '/second': (context) => const Consultas(),
+  },
+      //home: Inicial(),
     );
   }
 }
