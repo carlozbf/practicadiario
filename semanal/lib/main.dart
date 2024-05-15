@@ -3,6 +3,7 @@ import 'package:semanal/screens/inicial.dart';
 
 import 'screens/consultas.dart';
 import 'screens/herramientas.dart';
+import 'screens/pages/consultas/dblocal.dart';
 
 void main(List<String> args) {
   runApp(const MyAppSemana());
@@ -22,6 +23,7 @@ class MyAppSemana extends StatelessWidget {
     '/': (context) => const Inicial(),
     '/second': (context) => const Consultas(),
     '/herramientas': (context) => const Herramientas(),
+    '/dblocal': (context) => const DBLocal(),
   },
       //home: Inicial(),
     );

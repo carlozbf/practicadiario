@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:semanal/screens/pages/herramientas/calculadora.dart';
 
+import 'pages/herramientas/otros.dart';
 import 'pages/herramientas/translator.dart';
 import 'pages/notas.dart';
 import 'pages/paginauno.dart';
@@ -22,9 +23,7 @@ class _HerramientasState extends State<Herramientas> {
 List paginas = [
   Calculadora(),
   Translator(),
-  Notas(),
-  Notas(),
-  Personal(),
+  Otros(),
 ];
 
 

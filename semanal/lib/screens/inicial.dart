@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'pages/consultas/consultaspage.dart';
 import 'pages/notas.dart';
 import 'pages/paginauno.dart';
 import 'pages/personal.dart';
@@ -20,7 +21,7 @@ class _InicialState extends State<Inicial> {
 List paginas = [
   Paginauno(),
   Notas(),
-  Notas(),
+  Consultas(),
   Notas(),
   Personal(),
 ];
