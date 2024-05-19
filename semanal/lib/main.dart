@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:semanal/screens/inicial.dart';
 
+// import 'database/database.dart';
 import 'screens/consultas.dart';
 import 'screens/herramientas.dart';
 import 'screens/pages/consultas/dblocal.dart';
 
+//variable Global
+//late AppDatabase database;
+
 void main(List<String> args) {
+
+  //variable Global
+  //database = MyDatabase();
+  //AppDatabase database;
+  //WidgetsFlutterBinding.ensureInitialized();
+
+  //database = AppDatabase();
   runApp(const MyAppSemana());
 }
 

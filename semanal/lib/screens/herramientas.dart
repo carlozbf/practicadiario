@@ -5,9 +5,9 @@ import 'package:semanal/screens/pages/herramientas/calculadora.dart';
 
 import 'pages/herramientas/otros.dart';
 import 'pages/herramientas/translator.dart';
-import 'pages/notas.dart';
-import 'pages/paginauno.dart';
-import 'pages/personal.dart';
+// import 'pages/notas.dart';
+// import 'pages/paginauno.dart';
+// import 'pages/personal.dart';
 
 class Herramientas extends StatefulWidget {
   const Herramientas({super.key});

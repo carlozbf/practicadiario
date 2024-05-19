@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:semanal/database/database.dart';
 
+
 class DBLocal extends StatefulWidget {
   const DBLocal({super.key});
 
@@ -32,19 +33,23 @@ class _DBLocalState extends State<DBLocal> {
   }
 
   void onPressed() async{
-    // ignore: avoid_print
-    print('Iniciando 23');
+    print('Iniciando 123');
 
   WidgetsFlutterBinding.ensureInitialized();
 
   final database = AppDatabase();
 
-  await database.into(database.todoItems).insert(TodoItemsCompanion.insert(
-        title: 'todo: finish drift setup',
-        content: 'We can now write queries and define our own tables.',
-      ));
+  print('Tercero');
+
+  // database.into(database.todoItems).insert(TodoItemsCompanion.insert(
+  //       title: 'ULITMO INSERT',
+  //       content: 'Este hermoso teclado suena bastante bien.',
+  //     ));
+
+  
   List<TodoItem> allItems = await database.select(database.todoItems).get();
 
   print('items in database: $allItems');
+  print('FINALIZO');
   }
 }

@@ -45,6 +45,7 @@ LazyDatabase _openConnection() {
     final file = File(p.join(dbFolder.path, 'dblocal.sqlite'));
 
     // ignore: avoid_print
+    print('Inicializacion Clase Database');
     print(file);
 
     if (Platform.isAndroid){
